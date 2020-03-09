@@ -7,8 +7,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @package         SGI
  * @subpackage      Admin
  * @category        Controlador
- * @author          Jcramos
- * @author          Juan Carlos Ramos
+ * @author          Romramirez
+ * @author          Rommel Ramirez
  * @link            http://sgi.sti.com.ve/
  * @version         Current v0.1.0 
  * @copyright       Copyright (c) 2017 SGI

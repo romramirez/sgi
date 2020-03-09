@@ -91,7 +91,7 @@ CREATE TABLE IF NOT EXISTS `departamento` (
 
 INSERT INTO `departamento` (`id`, `descripcion`, `observacion`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
 (1, 'System', 'Grupo de Sistemas', '2017-06-14 00:58:38', '2017-06-13 20:58:38', 1, 0),
-(2, 'Gestion de Disponibilidad', 'Coordinador Juan Carlos Ramos', '2017-06-15 02:14:04', '0000-00-00 00:00:00', 1, 0),
+(2, 'Gestion de Disponibilidad', 'Coordinador Rommel Ramirez', '2017-06-15 02:14:04', '0000-00-00 00:00:00', 1, 0),
 (3, 'Gestión de Capacidad', 'Gestión de Capacidad', '2017-07-03 16:11:07', '0000-00-00 00:00:00', 3, 0),
 (4, 'Gestión de Procesos', 'Gestión de Procesos', '2017-07-03 16:11:20', '0000-00-00 00:00:00', 3, 0),
 (5, 'Administración', 'Administración', '2017-07-03 16:11:29', '0000-00-00 00:00:00', 3, 0),
@@ -933,7 +933,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 INSERT INTO `usuario` (`id`, `departamento_id`, `avatar`, `usuario`, `nombre`, `apellido`, `password`, `estado`, `email`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
 (1, 1, 'admin.jpg', 'admin', 'Super', 'Administrador', '54971b18f16c09cc84540ac00f310f66e820c784a9af5ed5de1c3c84c5beb49b', 1, 'tebasde@gmail.com', '2017-06-02 16:10:06', '2017-07-26 19:39:23', 1, 1),
 (2, 2, 'operador.jpg', 'lvillegas', 'Luis', 'Villegas', '5a4a3b5d38b8a42928e9e46e849083a2383b7421c9c57411b38e8c1a9af267c7', 1, 'lvillegas@sti.com.ve', '2017-06-15 02:14:46', '2017-07-26 16:56:02', 1, 2),
-(3, 2, 'admin.jpg', 'jcramos', 'Juan Carlos', 'Ramos', '54971b18f16c09cc84540ac00f310f66e820c784a9af5ed5de1c3c84c5beb49b', 1, 'jcramos@sti.com.ve', '2017-06-22 23:40:13', '2017-07-03 12:02:25', 1, 3),
+(3, 2, 'admin.jpg', 'Romramirez', 'Juan Carlos', 'Ramos', '54971b18f16c09cc84540ac00f310f66e820c784a9af5ed5de1c3c84c5beb49b', 1, 'Romramirez@sti.com.ve', '2017-06-22 23:40:13', '2017-07-03 12:02:25', 1, 3),
 (6, 2, 'admin.jpg', 'crios', 'Carlos', 'Rios', '3e0dd6ee485c14d40ac85644173592cdefe4e93fe1513f31ca26e32c8a55c903', 1, 'crios@sti.com.ve', '2017-07-03 16:10:35', '0000-00-00 00:00:00', 3, 0),
 (7, 7, 'operador.jpg', 'amaiuetia', 'Anamir', 'Maiquetia', '3e0dd6ee485c14d40ac85644173592cdefe4e93fe1513f31ca26e32c8a55c903', 1, 'amaiquetia@sti.com.ve', '2017-07-12 19:32:22', '0000-00-00 00:00:00', 6, 0),
 (8, 7, 'operador.jpg', 'aguzman', 'Andrea', 'Guzman', '3e0dd6ee485c14d40ac85644173592cdefe4e93fe1513f31ca26e32c8a55c903', 1, 'aguzman@sti.com.ve', '2017-07-12 19:37:00', '0000-00-00 00:00:00', 6, 0),

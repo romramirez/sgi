@@ -6,7 +6,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
  * @package     SGICMS
  * @subpackage  Libreria
  * @category    Libreria
- * @autor       Jcramos
+ * @autor       Romramirez
  * @link        http://sgi.sti.com.ve
  * @version     Current v0.1.0
  * @copyright   Copyright (c) 2017  STI
