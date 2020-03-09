@@ -18,10 +18,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class Inicio extends CI_Controller {
 	public function __construct() {
 		parent::__construct();
-	/*	$ruta = 'dashboard/';
+		$ruta = 'dashboard/';
 		$this->load->model($ruta . 'Solicitudes_model');
                 $this->load->model($ruta . 'Computadoras_model');
-*/
+
 	}
 
 	public function index() {
