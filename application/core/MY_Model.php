@@ -126,7 +126,7 @@ class MY_Model extends CI_Model {
             $this->_database->where($this->soft_delete_key, (bool) $this->_temporary_only_deleted);
         }
         $this->_set_where($where);
-        //$this->trigger('before_get');Modificado por GRATIACMS
+        //$this->trigger('before_get');Modificado por  SGI
         $row = $this->_database->get($this->_table)
                 ->{$this->_return_type()}();
         $this->_temporary_return_type = $this->return_type;
@@ -399,7 +399,7 @@ class MY_Model extends CI_Model {
                 ->get($this->_table)
                 ->result();
         $options = array();
-        $options[''] = 'Seleccione'; //Modificado por GRATIACMS
+        $options[''] = 'Seleccione'; //Modificado por  SGI
         foreach ($result as $row) {
             $options[$row->{$key}] = $row->{$value};
         }
@@ -577,7 +577,7 @@ class MY_Model extends CI_Model {
     }
 
     /**
-     * Modificado por GRATIACMS
+     * Modificado por  SGI
      * A wrapper to $this->_database->where()
      */
     public function where_by($field, $valor) {
@@ -613,7 +613,7 @@ class MY_Model extends CI_Model {
                 $data = call_user_func_array(array($this, $method), array($data, $last));
             }
             /*
-             * Parte Modificada por GRATIACMS
+             * Parte Modificada por  SGI
              * Sirve para invocar un helper
              * con la funcion que llega
              */
@@ -621,7 +621,7 @@ class MY_Model extends CI_Model {
             $data = call_user_func($this->$event, $data);
         }
         /*
-         * Modificado por GRATIACMS
+         * Modificado por  SGI
          */
         if ($event === 'before_create') {
             $data = call_user_func('beforeInsert', $data);
@@ -640,7 +640,7 @@ class MY_Model extends CI_Model {
             return $data;
         }
         if (!empty($this->validate)) {
-            /* foreach ($data as $key => $val) { //MODIFICADO GRATIACMS
+            /* foreach ($data as $key => $val) { //MODIFICADO  SGI
               $_POST[$key] = $val;
               } */
             $this->load->library('form_validation');

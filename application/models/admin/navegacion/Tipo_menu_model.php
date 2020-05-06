@@ -5,12 +5,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * la gestión de la tabla tipo menu.
  * Es utilizada para crear los usuarios del sistema
  *
- * @package         GRATIACMS
+ * @package          SGI
  * @subpackage      Admin
  * @category        Modelo
- * @author          tutorialesvirtuales.com
- * @author          Roosevelt Guinand
- * @link            http://tutorialesvirtuales.com
+ *
+ * @author          Rommel 
+ *
  * @version         Current v1.0.0
  * @copyright       Copyright (c) 2010 - 2015 tutorialesvirtuales
  * @license         MIT

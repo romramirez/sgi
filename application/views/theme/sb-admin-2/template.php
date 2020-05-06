@@ -22,7 +22,7 @@
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() . TEMPLATEASSETS ?>vendor/font-awesome/css/font-awesome.min.css" >
         <!-- Menu Nestable -->
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() . TEMPLATEASSETSSGI ?>dist/js/jquery-nestable/jquery.nestable.css">
-        <!-- Custom GratiaCms Styles -->
+        <!-- Custom  SGI Styles -->
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() . TEMPLATEASSETSSGI ?>dist/css/styles.css">
         <!-- jQuery -->
         <script type="text/javascript" src="<?php echo base_url() . TEMPLATEASSETS ?>vendor/jquery/jquery.min.js"></script>
@@ -60,12 +60,12 @@
         <script type="text/javascript" src="<?php echo base_url() . TEMPLATEASSETSSGI ?>dist/js/jquery-nestable/jquery.nestable.js"></script>
         <!-- Custom Theme JavaScript -->
         <script type="text/javascript" src="<?php echo base_url() . TEMPLATEASSETS ?>dist/js/sb-admin-2.js"></script>
-        <!-- Custom GratiaCms JavaScript -->
-        <script type="text/javascript" src="<?php echo base_url() . TEMPLATEASSETSSGI ?>dist/js/gratiacms.js"></script>
+        <!-- Custom  SGI JavaScript -->
+        <script type="text/javascript" src="<?php echo base_url() . TEMPLATEASSETSSGI ?>dist/js/ SGI.js"></script>
         <script>
             $(document).ready(function () {
-                GratiaCms.tooltip();
-                GratiaCms.eliminar();
+                 SGI.tooltip();
+                 SGI.eliminar();
             });
             /*
              * Evitar enter en los forms

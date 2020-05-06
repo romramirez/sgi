@@ -54,7 +54,7 @@ $permiso_rol = $this->Modelo->getAll();
  *
 */
  $(document).ready(function () {
-        GratiaCms.datatablesEsp();
+         SGI.datatablesEsp();
         $('.permiso_rol').on('change', function () {
             var data;
             if ($(this).is(':checked')) {
@@ -72,7 +72,7 @@ $permiso_rol = $this->Modelo->getAll();
                     '<?php echo $this->security->get_csrf_token_name() ?>': '<?php echo $this->security->get_csrf_hash() ?>'
                 };
             }
-            GratiaCms.ajax('<?php echo $this->url ?>crear', data, '', $(".panel-default"), 'general');
+             SGI.ajax('<?php echo $this->url ?>crear', data, '', $(".panel-default"), 'general');
         });
     });
     </script>

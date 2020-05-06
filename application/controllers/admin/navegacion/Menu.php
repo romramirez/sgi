@@ -3,12 +3,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 /**
  * Controlador que permite gestionar los Menús del sistema
  *
- * @package         GRATIACMS
+ * @package          SGI
  * @subpackage      Admin
  * @category        Controlador
  * @author          tutorialesvrituales.com
- * @author          Roosevelt Guinand
- * @link            http://tutorialesvirtuales.com
+ * @author          Rommel 
+ *
  * @version         Current v1.0.0 
  * @copyright       Copyright (c) 2010 - 2015 Tutorialesvirtuales
  * @license         MIT

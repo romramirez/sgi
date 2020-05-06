@@ -6,9 +6,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @package         GRATICMS
  * @subpackage      Controller
  * @category        Controlador
- * @author          tutorialesvirtuales.com
- * @author          Roosevelt Guinand
- * @link            http://tutorialesvirtuales.com
+ *
+ * @author          Rommel 
+ *
  * @version         Current v1.0.0 
  * @copyright       Copyright (c) 2010 - 2015 tutorialesvirtuales
  * @license         MIT

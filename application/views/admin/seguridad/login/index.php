@@ -51,7 +51,7 @@
                         equalTo: 'Las contraseñas no coinciden'
                     }
         };
-        GratiaCms.validacion_general('#form-principal', reglas, mensajes);
+         SGI.validacion_general('#form-principal', reglas, mensajes);
 <?php if (isset($data->id)) : ?>
             $('#password, #re-password').removeAttr('required');
             $('#password').on('blur', function () {

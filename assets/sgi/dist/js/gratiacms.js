@@ -1,4 +1,4 @@
-var GratiaCms = function () {
+var  SGI = function () {
     return{
         ajax: function (url, data, campo, el, funcion) {
             el.block({ 

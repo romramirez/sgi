@@ -4,12 +4,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Esta libreria es la encargada de crear los archivos .json
  * con los menus para cada rol.
  * 
- * @package         GRATIACMS
+ * @package          SGI
  * @subpackage      Libraries
  * @category        Libreria
  * @author          tutorialesvrituales.com
- * @author          Roosevelt Guinand
- * @link            http://tutorialesvirtuales.com
+ * @author          Rommel 
+ *
  * @version         Current v1.0.0 
  * @copyright       Copyright (c) 2010 - 2015 Tutorialesvirtuales
  * @license         MIT

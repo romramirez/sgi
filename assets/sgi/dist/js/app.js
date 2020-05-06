@@ -14,7 +14,7 @@
 
 
     $(document).ready(function () {
-        GratiaCms.validacion_general('#form-principal');
+         SGI.validacion_general('#form-principal');
         $('#icono').on('blur', function () {
             $('.icono').addClass($(this).val());
         });
@@ -22,7 +22,7 @@
 
 
     $(document).ready(function () {
-        GratiaCms.validacion_general('#form-principal');
+         SGI.validacion_general('#form-principal');
     });
 
 
@@ -35,8 +35,8 @@
      */
     
        $(document).ready(function () {
-       GratiaCms.tooltip();
-       GratiaCms.eliminar();
+        SGI.tooltip();
+        SGI.eliminar();
    });
    /*
     * Evitar enter en los forms
