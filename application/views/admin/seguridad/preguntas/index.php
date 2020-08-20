@@ -1,5 +1,5 @@
 <?php echo $this->session->flashdata('mensaje') ?>
-<div class="row" id="duo_iframe">
+<div class="row">
     <div class="col-lg-12">
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -15,6 +15,7 @@
                         <thead>
                             <tr>
                                 <th>Descripción</th>
+                                <th>Observacion</th>
                                 <th>Acciones</th>
                             </tr>
                         </thead>
@@ -23,6 +24,7 @@
                             <?php foreach ($datas as $data): ?>
                                 <tr>
                                     <td><?php echo $data->descripcion ?></td>
+                                    <td><?php echo $data->observacion ?></td>
                                     <td>
                                         <a href="<?php echo $this->url . 'actualizar/' . $data->id ?>" class="btn btn-warning btn-sm tooltips" data-original-title="Editar este registro">
                                             <i class="fa fa-edit"></i></a>
@@ -38,3 +40,9 @@
         </div>
     </div>
 </div>
+<script>
+$(document).ready(function (){
+    SGI.datatables();
+    
+})
+</script>

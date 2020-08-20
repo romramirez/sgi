@@ -118,6 +118,8 @@ class Seguridad
             'apellido'   => $query->apellido,
             'creado'     => $query->created_at,
             'avatar'     => $query->avatar,
+            'email'      => $query->email,
+            'two_factor_permission' => $query->two_factor_permission,
 
         );
         $this->CI->session->set_userdata($data);

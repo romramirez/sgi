@@ -51,7 +51,7 @@
                         </thead>
                         <tbody>
                             <?php $datas = $this->Modelo->getAll() ?>
-
+                         
                             <?php foreach ($datas as $data): ?>
 
                                 <tr>

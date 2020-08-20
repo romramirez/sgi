@@ -50,7 +50,8 @@
 <script src="<?php echo base_url() . TEMPLATEASSETSSGI; ?>dist/js/jquery-nestable/jquery.nestable.js"></script>
 <!-- SGI App -->
 <script src="<?php echo base_url() . TEMPLATEASSETSSGI; ?>dist/js/app.js"></script>
-<script src="<?php echo base_url() . TEMPLATEASSETSSGI; ?>dist/js/ SGI.js"></script>
+<!--<script src="<?php /*echo base_url() . TEMPLATEASSETSSGI; */?>dist/js/SGI.js"></script> -->
+<script src="<?php echo base_url() . TEMPLATEASSETSSGI; ?>dist/js/gratiacms.js"></script>
 <!-- AdminLTE App -->
 <script src="<?php echo base_url() . TEMPLATEASSETS; ?>dist/js/adminlte.js"></script>
 <script>

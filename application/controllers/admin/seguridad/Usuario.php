@@ -28,6 +28,7 @@ class Usuario extends MY_Controller {
         $this->load->model($ruta . modelo(), 'Modelo');
         $this->load->model($ruta . 'Rol_model');
         $this->load->model($ruta . 'Departamento_model');
+        $this->load->model($ruta . 'Preguntas_model');
         /* VARIABLES PARA DINAMIZAR */
         $this->url = base_url() . $ruta . str_replace('_', '-', $this->controlador) . '/';
         $this->vista = $ruta . $this->controlador . '/';

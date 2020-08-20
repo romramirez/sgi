@@ -49,11 +49,14 @@ class Login extends MY_Controller {
         $this->form_validation->set_message('_verificar_usuario', 'Usuario o Contraseña incorrecta');
         if ($this->form_validation->run()) {
             if ($this->seguridad->crearSession()) {
-
-                redirect($this->session->userdata('peticion_url'));
-            }
+               
+                if ($_SESSION['two_factor_permission'] !== '1') {
+                    redirect($this->session->userdata('peticion_url'));
+                    return;
+                }
+                $this->_second_auth($_SESSION['email']);            }
         } else {
-
+           
             $this->load->view(THEME . TEMPLATELOGIN, $DATA);
         }
     }
@@ -73,6 +76,48 @@ class Login extends MY_Controller {
         if ($query->num_rows() > 0)
             return TRUE;
         return FALSE;
+    }
+
+    public function _second_auth($username) {
+                  
+        $ruta = 'admin/seguridad/login/';
+        $this->vista = 'admin/seguridad/login/second_auth';
+        /* VARIABLES PARA DINAMIZAR */
+        /* $username = 'luim.villegass@gmail.com'; */
+        // Personal Application Key
+        $akey = "GiEhgYmXZLC0K2g3io7UVMLiynuFQ6nKcUZdfuDe";
+
+        // Duo Integration Key
+        $ikey = "DI517MQFB5H4KN2OSSYE";
+
+        // Duo Secret Key
+        $skey = "GiEhgYmXZLC0K2g3io7UVMLiynuFQ6nKcUZdfuDe";
+
+
+        $DATA = array(
+            'titulo' => $this->titulo,
+            'descripcion' => "Duo Security Autenticador",
+            'contenido' => 'admin/seguridad/login/second_auth',
+            'avatar' => AVATAR_IMG . 'avatar.png',
+            'host' => 'api-e5ced9d3.duosecurity.com',
+            'post_action' =>base_URL() . "admin/login/process_second_auth",
+            'sig_request' => $this->duo->signRequest($ikey, $skey, $akey, $username)
+        );
+        $this->load->view(THEME . TEMPLATELOGIN, $DATA);
+    }
+
+    public function process_second_auth() {
+
+       // die();
+        // Same keys used in _second_auth()
+        $ikey = "DI517MQFB5H4KN2OSSYE";
+        $skey = "GiEhgYmXZLC0K2g3io7UVMLiynuFQ6nKcUZdfuDe";
+        $akey = "GiEhgYmXZLC0K2g3io7UVMLiynuFQ6nKcUZdfuDe";
+
+        $sig_response = $this->input->post('sig_response');
+        $username = $this->duo->verifyResponse($ikey, $skey, $akey, $sig_response);
+
+         $this->load->view(THEME . TEMPLATELOGIN, $DATA);
     }
 
     /*

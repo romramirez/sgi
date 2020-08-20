@@ -43,3 +43,17 @@ html,body{height:100%}.layout-boxed html,.layout-boxed body{height:100%}body{fon
  
  
  
+.dou {
+    border-top:0;
+	color:#666;
+	margin-top: -25px;
+    padding: 100px;
+}
+
+#duo_iframe {
+    width: 100%;
+    min-width: 304px;
+    max-width: 620px;
+    height: 330px;
+    background: transparent;
+}

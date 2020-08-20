@@ -16,18 +16,16 @@ defined('BASEPATH') or exit('No direct script access allowed');
  * @license         MIT
  * @since           31/06/2017
  */
-class Computadoras extends MY_Controller
-{
+class Computadoras extends MY_Controller {
 
     /**
      * Permite la carga de los Modelos a ser usuados, en los diferentes metodos de la clase
      * e inicializar las variables que permiten dinamizar el desarrollo
      */
-    public function __construct()
-    {
+    public function __construct() {
         parent::__construct();
-        $ruta        = 'dashboard/';
-        $rutaAdmin   = 'admin/inventario/';
+        $ruta = 'dashboard/';
+        $rutaAdmin = 'admin/inventario/';
         $rutaGeneral = 'admin/generales/';
         $rutaUsuario = 'admin/seguridad/';
         $this->load->model($ruta . modelo(), 'Modelo');
@@ -42,7 +40,7 @@ class Computadoras extends MY_Controller
 
 
         /* VARIABLES PARA DINAMIZAR */
-        $this->url   = base_url() . $ruta . str_replace('_', '-', $this->controlador) . '/';
+        $this->url = base_url() . $ruta . str_replace('_', '-', $this->controlador) . '/';
         $this->vista = $ruta . $this->controlador . '/';
         /* END VARIABLES */
     }
@@ -52,10 +50,9 @@ class Computadoras extends MY_Controller
      * registrados en la DB.
      * @return      String vista
      */
-    public function index()
-    {
+    public function index() {
         $data = [
-            'titulo'    => $this->titulo,
+            'titulo' => $this->titulo,
             'contenido' => $this->vista . 'index',
         ];
         $this->load->view(THEME . TEMPLATE, $data);
@@ -69,8 +66,7 @@ class Computadoras extends MY_Controller
      *          - Si recibe y valida los datos via POST redirecciona hacia el método Index
      *          - Si no carga la vista del formulario
      */
-    public function crear()
-    {
+    public function crear() {
         $this->form_validation->set_rules($this->Modelo->validate);
         if ($this->form_validation->run() === true) {
             $this->Modelo->crear(); //No utiliza el método insert de my_model
@@ -78,7 +74,7 @@ class Computadoras extends MY_Controller
             redirect($this->url);
         } else {
             $data = [
-                'titulo'    => 'Crear ' . $this->titulo,
+                'titulo' => 'Crear ' . $this->titulo,
                 'contenido' => $this->vista . 'crear',
             ];
             $this->load->view(THEME . TEMPLATE, $data);
@@ -95,8 +91,7 @@ class Computadoras extends MY_Controller
      *          redirecciona hacia el método Index
      *          de lo contrario carga la vista del formulario
      */
-    public function actualizar($id = false)
-    {
+    public function actualizar($id = false) {
         $this->form_validation->set_rules($this->Modelo->validate_update);
         if ($this->form_validation->run() === true) {
             $this->Modelo->actualizar($id); //No utiliza el método update de my_model
@@ -105,9 +100,9 @@ class Computadoras extends MY_Controller
         } else {
             $dato = $this->Modelo->getDato($id);
             $data = [
-                'titulo'    => 'Actualizar ' . $this->titulo,
+                'titulo' => 'Actualizar ' . $this->titulo,
                 'contenido' => $this->vista . 'crear',
-                'data'      => $dato ? $dato : show_404(),
+                'data' => $dato ? $dato : show_404(),
             ];
             $this->load->view(THEME . TEMPLATE, $data);
         }
@@ -119,8 +114,7 @@ class Computadoras extends MY_Controller
      *
      */
 
-    public function eliminar($id = false)
-    {
+    public function eliminar($id = false) {
         if ($this->Modelo->delete($id)) {
             mensaje_alerta('hecho', 'eliminar');
         } else {
@@ -135,36 +129,33 @@ class Computadoras extends MY_Controller
      * @param Int $estado
      * @return Redirect to Index
      */
-    public function cambiar_estado($id = false, $estado = null)
-    {
+    public function cambiar_estado($id = false, $estado = null) {
         if ($id && null !== $estado) {
-            $this->Modelo->update($id, ['estado' => $estado], true);'0' === $estado ? mensaje_alerta('hecho', 'desactivar') : mensaje_alerta('hecho', 'activar');
+            $this->Modelo->update($id, ['estado' => $estado], true);
+            '0' === $estado ? mensaje_alerta('hecho', 'desactivar') : mensaje_alerta('hecho', 'activar');
             redirect($this->url);
         } else {
             show_404();
         }
     }
 
-    public function get_modelo($marca_id)
-    {
+    public function get_modelo($marca_id) {
         $result = $this->Modelo_model->get_modelo($marca_id);
         $this->output->set_output(json_encode($result));
     }
 
-    public function get_procesador($procesador)
-    {
+    public function get_procesador($procesador) {
         $result = $this->Procesador_model->get_procesador($procesador);
         $this->output->set_output(json_encode($result));
     }
-    public function reporte()
-    {
-        $this->load->library('crearpdf');
+
+    public function reporte() {
+        $this->load->library('Pdfgenerator');
         $datas = $this->Modelo->getAll();
-        $data = [
-            'titulo'    => $this->titulo];
-        $html = $this->load->view('dashboard/computadoras/reporte', $data,true);
+        $data = ['titulo' => $this->titulo];
+        $html = $this->load->view('dashboard/computadoras/reporte', $data, true);
 
-        $this->crearpdf->crear_pdf($html,true,'computadores');
-
+        $this->Pdfgenerator->generate($html, true, 'computadores');
     }
+
 }
