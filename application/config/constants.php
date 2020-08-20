@@ -99,4 +99,4 @@ define('TEMPLATEASSETS', 'assets/AdminLTE/');
 //define('TEMPLATEASSETS', 'assets/sb-admin-2/');
 define('TEMPLATEASSETSSGI','assets/sgi/');
 define('AVATAR_IMG', TEMPLATEASSETSSGI . 'uploads/avatar/');
-define('DOU','assets/duo/');
+define('DUO','assets/duo/');

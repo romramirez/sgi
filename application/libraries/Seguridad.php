@@ -63,7 +63,8 @@ class Seguridad
      */
     private function checkPermisos($controlador, $metodo, $rol_id)
     {
-        if ('1' === $rol_id or $this->CI->input->is_ajax_request() or 'inicio' === $controlador or 'login' === $controlador or 'migrations' === $controlador) {
+        if ('1' === $rol_id or $this->CI->input->is_ajax_request() or 'inicio' === $controlador or 'login' === $controlador or 'migrations' === $controlador
+                or 'process_second_auth' === $controlador) {
             return true;
         }
         if ('1' !== $rol_id and $this->CI->uri->segment(1) !== 'admin') {
@@ -120,7 +121,6 @@ class Seguridad
             'avatar'     => $query->avatar,
             'email'      => $query->email,
             'two_factor_permission' => $query->two_factor_permission,
-
         );
         $this->CI->session->set_userdata($data);
         return true;
