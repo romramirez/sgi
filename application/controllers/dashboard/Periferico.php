@@ -136,13 +136,14 @@ class Periferico extends MY_Controller {
     }
     public function reporte()
     {
-        $this->load->library('crearpdf');
+        $this->load->library('Pdfgenerator');
         $datas = $this->Modelo->getAll();
         $data = [
-            'titulo'    => $this->titulo];
+        'titulo'    => $this->titulo];
         $html = $this->load->view('dashboard/periferico/reporte', $data,true);
-
-        $this->crearpdf->crear_pdf($html,true,'perifericos');
+        $filename = 'perifericos';
+        /*$this->pdfgenerator->generate($html,true,'perifericos');*/
+        $this->pdfgenerator->generate($html, $filename, true, 'Letter', 'portrait');
 
     }
 }

@@ -150,12 +150,11 @@ class Computadoras extends MY_Controller {
     }
 
     public function reporte() {
-        $this->load->library('Pdfgenerator');
         $datas = $this->Modelo->getAll();
         $data = ['titulo' => $this->titulo];
-        $html = $this->load->view('dashboard/computadoras/reporte', $data, true);
-
-        $this->Pdfgenerator->generate($html, true, 'computadores');
+        $filename = 'computadores';
+        $html = $this->load->view('dashboard/computadoras/reporte', $data, TRUE);
+        $this->pdfgenerator->generate($html, $filename, true, 'Letter', 'portrait');
     }
 
 }
