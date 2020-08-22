@@ -118,6 +118,7 @@ class Usuario_model extends MY_Model
             'email' => $this->input->post('email'),
             'password' => hash('sha256', sha1($this->input->post('password'))),
             'estado' => $this->input->post('estado'),
+            'two_factor_permission' => $this->input->post('estado'),
             'departamento_id' => $this->input->post('departamento_id'),
         );
         $this->db->insert('usuario', beforeInsert($data));
@@ -150,6 +151,7 @@ class Usuario_model extends MY_Model
             'apellido' => $this->input->post('apellido'),
             'email' => $this->input->post('email'),
             'estado' => $this->input->post('estado'),
+            'two_factor_permission' => $this->input->post('estado'),
         );
         if ($this->input->post('password')) {
             $data['password'] = hash('sha256', sha1($this->input->post('password')));

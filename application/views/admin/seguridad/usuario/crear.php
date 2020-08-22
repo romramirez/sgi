@@ -22,9 +22,6 @@
                         <div class="pull-right">
                             <a href="<?php echo $this->url ?>" class="btn btn-success btn-sm tooltips" >Volver al listado <i class="fa fa-hand-o-left"></i></a>
                         </div>
-                        <div class="pull-right">
-                            <?php echo anchor('admin/seguridad/respuestas', 'Preguntas de Seguridad ', array('class' => 'btn btn-success btn-sm tooltips')); ?>
-                        </div>
                     </div>
                     <div class="panel-body">
                         <?php echo form_open('', 'id="form-principal"'); ?>
@@ -86,6 +83,12 @@
                                 <div class="form-group">
                                     <label class="control-label">Departamento <span class="required">*</span></label>
                                     <?php echo form_dropdown('departamento_id', $this->Departamento_model->order_by('id', 'asc')->dropdown('descripcion'), set_value('departamento_id', isset($data->departamento_id) ? $data->departamento_id : ''), 'id="departamento_id" class="form-control" required') ?>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="control-label">DUO Authenticacion <span class="required">*</span></label>
+                                    <?php echo form_dropdown('estado', $this->config->item('estado'), set_value('estado', isset($data->two_factor_permission) ? $data->two_factor_permission : 1), 'id="two_factor_permission" class="form-control" required') ?>
                                 </div>
                             </div>
                         </div>
