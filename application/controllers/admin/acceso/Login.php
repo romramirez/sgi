@@ -52,7 +52,7 @@ class Login extends MY_Controller {
         $this->form_validation->set_rules('usuario', 'Usuario', 'trim|required|callback__verificar_usuario');
         $this->form_validation->set_rules('password', 'Contraseña', 'trim|required');
         $this->form_validation->set_message('_verificar_usuario', 'Usuario o Contraseña incorrecta');
-        if ($this->form_validation->run() !== false) {
+        if ($this->form_validation->run() ) {
             if ($this->seguridad->crearSession()) {
                 if ($_SESSION['two_factor_permission'] !== '1') {
                     redirect($this->session->userdata('peticion_url'));
