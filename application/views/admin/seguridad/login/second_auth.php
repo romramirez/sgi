@@ -1,7 +1,7 @@
 
 <?php echo $this->session->flashdata('mensaje') ?>
-<div class="row duo">
-    <div class="col-lg-12">
+<div class="row login-box">
+    <div class="">
         <div class="panel panel-default">
             <div class="box-header">
                 <h3 class="box-title center-block"><p align="center">
@@ -10,10 +10,10 @@
             </div>
             <!-- /.panel-heading -->
             <div class="panel-body" >
-                <div class="dataTable_wrapper"><iframe id="duo_iframe" width="100%" height="500" frameborder="0"></iframe>
-                        <?php echo form_open('admin/acceso/login/process_second_auth', array('id' => "form_principal")); ?>
+                <div class="dataTable_wrapper">
+                    <?php echo form_open('admin/acceso/login/process_second_auth', array('id' => "duo_form")); ?>
+                    <iframe id="duo_iframe" width="100%" height="500" frameborder="0"></iframe>
                         <?php echo validation_errors() ?>
-                        <?php print_r($_SESSION) ?>
                         <?php echo form_close(); ?>
                 </div>
             </div>
@@ -29,4 +29,3 @@
         'sig_request': '<?php echo $sig_request; ?>'
     });
 </script>
-

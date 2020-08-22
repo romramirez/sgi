@@ -41,26 +41,28 @@ class Login extends MY_Controller {
      * @see https://codeigniter.com/user_guide/general/urls.html
      */
     public function index() {
+        //print_r($_SESSION[]);
+        if (isset($_SESSION['two_factor_permission'])){
+            redirect($this->session->userdata('peticion_url'));
+        }
+
         $DATA['titulo'] = 'Gestion de Sistemas';
         $DATA['descripcion'] = '';
         $DATA['contenido'] = $this->vista . 'index';
         $this->form_validation->set_rules('usuario', 'Usuario', 'trim|required|callback__verificar_usuario');
         $this->form_validation->set_rules('password', 'Contraseña', 'trim|required');
         $this->form_validation->set_message('_verificar_usuario', 'Usuario o Contraseña incorrecta');
-        if ($this->form_validation->run()) {
+        if ($this->form_validation->run() !== false) {
             if ($this->seguridad->crearSession()) {
-
                 if ($_SESSION['two_factor_permission'] !== '1') {
                     redirect($this->session->userdata('peticion_url'));
-                    return;
+                    //return;
                 }
                 $this->_second_auth($_SESSION['email']);
                 return;
-                                die();
             }
-        } else {
-            $this->load->view(THEME . TEMPLATELOGIN, $DATA);
         }
+    $this->load->view(THEME . TEMPLATELOGIN, $DATA);
     }
 
     /*
