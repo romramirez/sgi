@@ -87,7 +87,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <label class="control-label">DUO Authenticacion <span class="required">*</span></label>
+                                    <label class="control-label">Autenticación DUO<span class="required">*</span></label>
                                     <?php echo form_dropdown('estado', $this->config->item('estado'), set_value('estado', isset($data->two_factor_permission) ? $data->two_factor_permission : 1), 'id="two_factor_permission" class="form-control" required') ?>
                                 </div>
                             </div>

@@ -150,14 +150,12 @@ class Solicitudes extends MY_Controller {
     }
     public function reporte()
     {
-        $this->load->library('crearpdf');
         $datas = $this->Modelo->getAll();
         $data = [
-            'titulo'    => $this->titulo];
-        $html = $this->load->view('dashboard/solicitudes/reporte', $data,true);
+        'titulo'    => $this->titulo];
+        $html = $this->load->view('dashboard/solicitudes/reporte', $data, TRUE);
+        $filename = 'solicitudes';
+        $this->pdfgenerator->generate($html, $filename, true, 'Letter', 'portrait');
 
-        $this->crearpdf->crear_pdf($html,true,'solicitudes');
-
-    }
-
+    }        
 }

@@ -136,14 +136,15 @@ class Red extends MY_Controller {
     }
     public function reporte()
     {
-        $this->load->library('crearpdf');
+        
         $datas = $this->Modelo->getAll();
         $data = [
         'titulo'    => $this->titulo];
-        $html = $this->load->view('dashboard/red/reporte', $data,true);
+        $html = $this->load->view('dashboard/red/reporte', $data, TRUE);
         $filename = 'redes';
         /*$this->pdfgenerator->generate($html,true,'perifericos');*/
         $this->pdfgenerator->generate($html, $filename, true, 'Letter', 'portrait');
 
     }
+
 }

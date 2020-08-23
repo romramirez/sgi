@@ -87,15 +87,14 @@ class Login extends MY_Controller {
         $ruta = 'admin/seguridad/login/';
         $this->vista = 'admin/seguridad/login/second_auth';
         /* VARIABLES PARA DINAMIZAR */
-        /* $username = 'luim.villegass@gmail.com'; */
         // Personal Application Key
-        $akey = "GiEhgYmXZLC0K2g3io7UVMLiynuFQ6nKcUZdfuDe";
+        $akey = "4GG4A9qpL3yUnvFbYfZ44QdbmHM7PTgMua5yFy5U";
 
         // Duo Integration Key
-        $ikey = "DI517MQFB5H4KN2OSSYE";
+        $ikey = "DIJMBTUWC2MZF0LQNMID";
 
         // Duo Secret Key
-        $skey = "GiEhgYmXZLC0K2g3io7UVMLiynuFQ6nKcUZdfuDe";
+        $skey = "4GG4A9qpL3yUnvFbYfZ44QdbmHM7PTgMua5yFy5U";
 
 
         $DATA = array(
@@ -103,7 +102,7 @@ class Login extends MY_Controller {
             'descripcion' => "Sistema de doble autenticacion Duo Security",
             'contenido' => 'admin/seguridad/login/second_auth',
             'avatar' => AVATAR_IMG . 'avatar.png',
-            'host' => 'api-e5ced9d3.duosecurity.com',
+            'host' => 'api-883ffcad.duosecurity.com',
             'post_action' => base_URL() . "admin/acceso/login/process_second_auth",
             'sig_request' => $this->duo->signRequest($ikey, $skey, $akey, $username)
         );
@@ -116,9 +115,9 @@ class Login extends MY_Controller {
            redirect($this->session->userdata('peticion_url'));
         }
         // Same keys used in _second_auth()
-        $ikey = "DI517MQFB5H4KN2OSSYE";
-        $skey = "GiEhgYmXZLC0K2g3io7UVMLiynuFQ6nKcUZdfuDe";
-        $akey = "GiEhgYmXZLC0K2g3io7UVMLiynuFQ6nKcUZdfuDe";
+        $ikey = "DIJMBTUWC2MZF0LQNMID";
+        $skey = "4GG4A9qpL3yUnvFbYfZ44QdbmHM7PTgMua5yFy5U";
+        $akey = "4GG4A9qpL3yUnvFbYfZ44QdbmHM7PTgMua5yFy5U";
 
         $sig_response = $this->input->post('sig_response');
         $username = $this->duo->verifyResponse($ikey, $skey, $akey, $sig_response);
