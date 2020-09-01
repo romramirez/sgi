@@ -4,16 +4,16 @@ defined('BASEPATH') or exit('No direct script access allowed');
  * Esta libreria es la encargada de crear los archivos .json
  * con los permisos para cada rol.
  *
- * @package          SGI
+ * @package         SGI
  * @subpackage      Libraries
  * @category        Libreria
- * @author          tutorialesvrituales.com
- * @author          Rommel 
- *
+ * @author          romramirez
+ * @author          Rommel Ramirez 
+ * @link            http://sgi.sti.com/
  * @version         Current v1.0.0
- * @copyright       Copyright (c) 2010 - 2015 Tutorialesvirtuales
+ * @copyright       Copyright (c) 2020 SGI
  * @license         MIT
- * @since           06/08/2015
+ * @since           31/06/2020
  */
 class Permiso_sgicms
 {

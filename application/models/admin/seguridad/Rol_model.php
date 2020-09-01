@@ -11,11 +11,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @category        Modelo
  * @author          Romramirez
  * @author          Rommel Ramirez
- * @link            http://sgi.sti.com.ve/
- * @version         Current v0.1.0 
- * @copyright       Copyright (c) 2017 SGI
+ * @link            http://sgi.sti.com/
+ * @version         Current v1.0.0 
+ * @copyright       Copyright (c) 2020 SGI
  * @license         MIT
- * @since           31/06/2017
+ * @since           31/06/2020
  */
 class Rol_model extends MY_Model {
     /**

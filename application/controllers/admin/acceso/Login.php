@@ -9,12 +9,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @subpackage      Admin
  * @category        Controlador
  * @author          romramirez
- * @author          Rommel Ramírez
- * @link            http://sgi.sti.com.ve/
- * @version         Current v0.1.0
- * @copyright       Copyright (c) 2017 SGI
+ * @author          Rommel Ramirez
+ * @link            http://sgi.sti.com/
+ * @version         Current v1.0.0
+ * @copyright       Copyright (c) 2020 SGI
  * @license         MIT
- * @since           31/06/2017
+ * @since           31/06/2020
  */
 class Login extends MY_Controller {
 

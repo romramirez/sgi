@@ -11,7 +11,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
  * @version     Current v0.1.0
  * @copyright   Copyright (c) 2017  STI
  * @license     MIT License
- * @since       02/06/2017
+ * @since       31/06/2020
  *
  */
 

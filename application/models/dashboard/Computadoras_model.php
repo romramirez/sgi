@@ -11,13 +11,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @package         SGI
  * @subpackage      usuario
  * @category        Modelo
- * @author          Jcramos
- * @author          Juan Carlos Ramos
- * @link            http://sgi.sti.com.ve/
- * @version         Current v0.1.0 
- * @copyright       Copyright (c) 2017 SGI
+ * @author          romramirez
+ * @author          Rommel Ramirez
+ * @link            http://sgi.sti.com/
+ * @version         Current v1.0.0 
+ * @copyright       Copyright (c) 2020 SGI
  * @license         MIT
- * @since           31/06/2017
+ * @since           31/06/2020
  */
 class Computadoras_model extends MY_Model {
 

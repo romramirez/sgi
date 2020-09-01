@@ -3,16 +3,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 /**
  * Extender el Core de Codeigniter, para crear un Master Controller
  *
- * @package         GRATICMS
+ * @package         SGI
  * @subpackage      Controller
  * @category        Controlador
- *
- * @author          Rommel 
- *
+ * @author          romramirez
+ * @author          Rommel Ramirez 
+ * @link            http://sgi.sti.com/
  * @version         Current v1.0.0 
- * @copyright       Copyright (c) 2010 - 2015 tutorialesvirtuales
+ * @copyright       Copyright (c) 2020 SGI
  * @license         MIT
- * @since           13/07/2015
+ * @since           13/07/2020
  */
 class Migrations extends CI_Controller {
     /**

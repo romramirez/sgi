@@ -3,16 +3,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 /**
  * Controlador que permite gestionar los tipos de Menús del sistema
  *
- * @package          SGI
+ * @package         SGI
  * @subpackage      Admin
  * @category        Controlador
- * @author          tutorialesvrituales.com
- * @author          Rommel 
- *
+ * @author          romramirez
+ * @author          Rommel Ramirez 
+ * @link            http://sgi.sti.com/
  * @version         Current v1.0.0 
- * @copyright       Copyright (c) 2010 - 2015 Tutorialesvirtuales
+ * @copyright       Copyright (c) 2020 SGI
  * @license         MIT
- * @since           24/08/2015
+ * @since           31/06/2020
  */
 class Tipo_menu extends MY_Controller {
     /**

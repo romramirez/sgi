@@ -4,9 +4,6 @@
  *
  * An open source application development framework for PHP
  *
- * This content is released under the MIT License (MIT)
- *
- * Copyright (c) 2014 - 2019, British Columbia Institute of Technology
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -26,13 +23,12 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  *
- * @package	CodeIgniter
- * @author	EllisLab Dev Team
- * @copyright	Copyright (c) 2008 - 2014, EllisLab, Inc. (https://ellislab.com/)
- * @copyright	Copyright (c) 2014 - 2019, British Columbia Institute of Technology (https://bcit.ca/)
- * @license	https://opensource.org/licenses/MIT	MIT License
- * @link	https://codeigniter.com
- * @since	Version 3.0.0
+ * @package	SGI
+ * @author	Rommel Ramirez
+ * @copyright	Copyright (c) 2020 SGI
+ * @license	MIT
+ * @link   http://sgi.sti.com/
+ * @since  31/06/2020
  * @filesource
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
@@ -40,11 +36,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 /**
  * CodeIgniter Session Memcached Driver
  *
- * @package	CodeIgniter
+ * @package	SGI
  * @subpackage	Libraries
  * @category	Sessions
- * @author	Andrey Andreev
- * @link	https://codeigniter.com/user_guide/libraries/sessions.html
+ * @author	Rommel Ramirez
+ * @link   http://sgi.sti.com//user_guide/libraries/sessions.html
  */
 class CI_Session_memcached_driver extends CI_Session_driver implements SessionHandlerInterface {
 

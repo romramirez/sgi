@@ -6,16 +6,16 @@ defined('BASEPATH') or exit('No direct script access allowed');
  * la gestión de la tabla permiso.
  * Es utilizada para crear los usuarios del sistema
  *
- * @package          SGI
+ * @package         SGI
  * @subpackage      Admin
  * @category        Modelo
- *
- * @author          Rommel 
- *
+ * @author          romramirez
+ * @author          Rommel Ramirez 
+ * @link            http://sgi.sti.com/
  * @version         Current v1.0.0
- * @copyright       Copyright (c) 2010 - 2015 tutorialesvirtuales
+ * @copyright       Copyright (c) 2020 SGI
  * @license         MIT
- * @since           06/08/2015
+ * @since           31/06/2020
  */
 class Country_model extends MY_Model
 {

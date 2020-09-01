@@ -3,14 +3,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 /**
  * Controlador que permite gestionar los Roles de los menus
  *
- * @package          SGI
+ * @package         SGI
  * @subpackage      Admin
  * @category        Controlador
- * @author          tutorialesvrituales.com
- * @author          Rommel 
- *
+ * @author          romramirez
+ * @author          Rommel Ramirez 
+ * @link            http://sgi.sti.com/
  * @version         Current v1.0.0 
- * @copyright       Copyright (c) 2010 - 2015 Tutorialesvirtuales
+ * @copyright       Copyright (c) 2020 SGI
  * @license         MIT
  * @since           25/08/2015
  */

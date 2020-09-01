@@ -2,11 +2,11 @@
 /**
  * System messages translation for CodeIgniter(tm)
  *
- * @author	CodeIgniter community
- * @author	Iban Eguia
- * @copyright	Copyright (c) 2014 - 2017, British Columbia Institute of Technology (http://bcit.ca/)
- * @license	http://opensource.org/licenses/MIT	MIT License
- * @link	https://codeigniter.com
+ * @author romramirez
+ * @author	Rommel Ramirez
+ * @copyright      Copyright (c) 2020 SGI
+ * @license    MIT
+ * @link   http://sgi.sti.com/
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
 

@@ -19,7 +19,7 @@
            <?php $Num = $this->Solicitudes_model->getCountRequerimiento($this->session->userdata('usuario_id')); ?>
             <h3><?php echo $Num ?> </h3>
 
-            <p>Requerimientoso</p>
+            <p>Requerimientos</p>
         </div>
         <div class="icon">
             <i class="ion ion-bag"></i>
