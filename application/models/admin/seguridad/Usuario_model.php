@@ -151,7 +151,7 @@ class Usuario_model extends MY_Model
             'apellido' => $this->input->post('apellido'),
             'email' => $this->input->post('email'),
             'estado' => $this->input->post('estado'),
-            'two_factor_permission' => $this->input->post('estado'),
+            'two_factor_permission' => $this->input->post('two_factor_permission'),
         );
         if ($this->input->post('password')) {
             $data['password'] = hash('sha256', sha1($this->input->post('password')));

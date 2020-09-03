@@ -67,7 +67,7 @@ class Seguridad
                 or 'process_second_auth' === $controlador) {
             return true;
         }
-        if ('1' !== $rol_id and $this->CI->uri->segment(1) !== 'admin') {
+        if ('1' !== $rol_id /*and $this->CI->uri->segment(1) !== 'admin'*/) {
             $permiso  = $controlador . '@' . $metodo;
             $file     = FCPATH . 'assets/sgi/permisos/permiso_' . $this->CI->session->userdata('rol_id') . '.json';
             $permisos = json_decode(file_get_contents($file), true);

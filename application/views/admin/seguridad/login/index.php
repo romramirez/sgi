@@ -22,11 +22,16 @@
                         <input type="checkbox"> Recordar
                     </label>
                 </div>
+                <div class="col-xs-10">
+                    <a href="#">Olvide mi clave</a>
+                    <a href="#">Registrar</a>
+                </div>
             </div>
             <!-- /.col -->
             <div class="col-xs-4">
                 <button type="submit" class="btn btn-primary btn-block btn-flat">Login</button>
             </div>
+
             <!-- /.col -->
         </div>
         <?php echo form_close(); ?> 
