@@ -46,7 +46,7 @@
                                 <th>Descripcion</th>
                                 <th>Estado</th>
                                 <th>Departamento</th>
-                                <th>Acciones</th>
+                                <th>Fecha</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -65,19 +65,12 @@
                                     <a href="#" class="" data-original-title="Estado Actual"><?php echo $data->ESDescripcion ?></a>
                                     </td>
                                     <td><?php echo $data->DEDescripcion ?></td>
+                                    <td><?php echo $data->created_at ?></td>
                                 </tr>
                             <?php endforeach;?>
 
                         </tbody>
-                        <tfoot>
-                            <tr>
-                                <tr>
-                                <th>Propietario</th>
-                                <th>Descripcion</th>
-                                <th>Estado</th>
-                                <th>Departamento</th>
-                            </tr>
-                        </tfoot>
+
                     </table>
                 </div>
                 <!-- /.box-body -->

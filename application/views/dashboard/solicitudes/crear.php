@@ -36,54 +36,52 @@
                             <div class="col-lg-4">
                                 <div class="form-group">
                                     <label class="control-label">Estado<span class="required">*</span></label>
-<?php
-if (isset($data->id)) {
-	echo form_dropdown('Esolicitud_id', $this->Esolicitud_model->order_by('id', 'asc')->dropdown('estado'), set_value('Esolicitud_id', isset($data->Esolicitud_id) ? $data->Esolicitud_id : ''), 'id="Esolicitud_id" class="form-control" required');
-} else {
-	$EdoInicial = 'Abierto';
+                                    <?php
+                                    if (isset($data->id)) {
+                                        echo form_dropdown('Esolicitud_id', $this->Esolicitud_model->order_by('id', 'asc')->dropdown('estado'), set_value('Esolicitud_id', isset($data->Esolicitud_id) ? $data->Esolicitud_id : ''), 'id="Esolicitud_id" class="form-control" required');
+                                    } else {
+                                        $EdoInicial = 'Abierto';
 
-	$Esolicitud_id = array(
-		'type' => 'text',
-		'name' => 'Esolicitud_id',
-		'id' => 'Esolicitud_id',
-		'value' => set_value('Esolicitud_id', $EdoInicial ? $EdoInicial : ''),
-		'class' => 'form-control',
-		'disabled' => '',
-	);
-	echo form_input($Esolicitud_id);
-
-}
-?>
+                                        $Esolicitud_id = array(
+                                            'type' => 'text',
+                                            'name' => 'Esolicitud_id',
+                                            'id' => 'Esolicitud_id',
+                                            'value' => set_value('Esolicitud_id', $EdoInicial ? $EdoInicial : ''),
+                                            'class' => 'form-control',
+                                            'disabled' => '',
+                                        );
+                                        echo form_input($Esolicitud_id);
+                                    }
+                                    ?>
                                     <?php ?>
                                 </div>
                             </div>
                             <div class="col-lg-4">
                                 <div class="form-group">
                                     <label class="control-label">Usuario <span class="required">*</span></label>
-<?php
-if (isset($data->id)) {
-	$usuario_id = array(
-		'type' => 'text',
-		'name' => 'usuario_id',
-		'id' => 'usuario_id',
-		'value' => $data->nombre . ' ' . $data->apellido,
-		'class' => 'form-control',
-		'disabled' => '',
-	);
-	echo form_input($usuario_id);
-
-} else {
-	$usuario_id = array(
-		'type' => 'text',
-		'name' => 'usuario_id',
-		'id' => 'usuario_id',
-		'value' => $this->session->userdata('nombre') . ' ' . $this->session->userdata('apellido'),
-		'class' => 'form-control',
-		'disabled' => '',
-	);
-	echo form_input($usuario_id);
-}
-?>
+                                    <?php
+                                    if (isset($data->id)) {
+                                        $usuario_id = array(
+                                            'type' => 'text',
+                                            'name' => 'usuario_id',
+                                            'id' => 'usuario_id',
+                                            'value' => $data->nombre . ' ' . $data->apellido,
+                                            'class' => 'form-control',
+                                            'disabled' => '',
+                                        );
+                                        echo form_input($usuario_id);
+                                    } else {
+                                        $usuario_id = array(
+                                            'type' => 'text',
+                                            'name' => 'usuario_id',
+                                            'id' => 'usuario_id',
+                                            'value' => $this->session->userdata('nombre') . ' ' . $this->session->userdata('apellido'),
+                                            'class' => 'form-control',
+                                            'disabled' => '',
+                                        );
+                                        echo form_input($usuario_id);
+                                    }
+                                    ?>
                                 </div>
                             </div>
                             <div class="col-lg-12">
@@ -95,10 +93,10 @@ if (isset($data->id)) {
                             <div class="col-lg-offset-1 col-lg-11">
                                 <input type="hidden" id="id" name="id" value="<?php echo isset($data->id) ? $data->id : '' ?>" />
                                 <button type="submit" class="btn btn-info">
-                                    <?php echo isset($data->id) ? "Actualizar" : "Crear" ?>
+<?php echo isset($data->id) ? "Actualizar" : "Crear" ?>
                                 </button>
                             </div>
-                            <?php echo form_close() ?>
+<?php echo form_close() ?>
                         </div>
                     </div>
                 </div>
