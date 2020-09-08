@@ -95,15 +95,15 @@ class Red_model extends MY_Model {
      */
     public function getDato($id) {
         return $this->db
-                        ->select('P.*, MA.descripcion MAdescripcion, TP.descripcion,'
+                        ->select('R.*, MA.descripcion MAdescripcion, TP.descripcion TPdescripcion,'
                                 . 'MO.descripcion MOdescripcion, '
                                 . 'US.nombre USNombre, US.apellido, E.descripcion Edescripcion')
-                        ->from($this->_table . ' P')
-                        ->join('tperiferico TP', 'P.tipo_periferico_id=TP.id AND P.id= ' . $id)
-                        ->join('marca MA', 'P.marca_id=MA.id AND P.id= ' . $id)
-                        ->join('modelo MO', 'P.modelo_id=MO.id AND P.id= ' . $id)
-                        ->join('estado E', 'P.estado_id=E.id AND P.id= ' . $id)
-                        ->join('usuario US', 'P.usuario_id=US.id AND P.id= ' . $id)
+                        ->from($this->_table . ' R')
+                        ->join('tred TP', 'R.tred_id=TP.id')
+                        ->join('marca MA', 'R.marca_id_marca=MA.id')
+                        ->join('modelo MO', 'R.modelo_id=MO.id')
+                        ->join('estado E', 'R.estado_id=E.id')
+                        ->join('usuario US', 'R.usuario_id=US.id')
                         ->get()
                         ->row();
     }
